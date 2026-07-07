@@ -160,17 +160,17 @@ figure img{border:1px solid #EFE9DA;}
   <p>收集到的影像與模型，會進行以下數位分析與模擬，協助醫師設計治療計畫，並於「聽取報告」時與您討論（以下動畫為示意）：</p>
   <div class="anim">
     <div class="atitle">口掃檔案・數位口內掃描建檔</div>
-    <video src="assets/scan.mp4" poster="assets/scan.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="scan.mp4" poster="scan.jpg" autoplay muted loop playsinline preload="metadata"></video>
     <div class="acap">口內掃描直接建立 3D 數位齒列模型，精準記錄牙齒排列與咬合，作為分析與模擬的基礎。</div>
   </div>
   <div class="anim">
     <div class="atitle">外觀模擬・治療後外觀預覽</div>
-    <video src="assets/sim.mp4" poster="assets/sim.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="sim.mp4" poster="sim.jpg" autoplay muted loop playsinline preload="metadata"></video>
     <div class="acap">依相片與測顱分析，模擬治療後的側臉與外觀變化，讓治療目標不只牙齒整齊，也兼顧臉型。</div>
   </div>
   <div class="anim">
     <div class="atitle">手術設計・正顎手術數位模擬</div>
-    <video src="assets/surg.mp4" poster="assets/surg.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="surg.mp4" poster="surg.jpg" autoplay muted loop playsinline preload="metadata"></video>
     <div class="acap">若治療需搭配正顎手術，會於電腦上模擬骨骼移動與咬合設計，事先規劃手術方案。</div>
   </div>
 </section>
@@ -426,7 +426,7 @@ const VIDEOS = {
   first_wear: '8hxao5gaETk',  // ［傳統矯正］初次裝置配戴後衛教 → 清潔衛教
   device_care: '',            // ［傳統矯正］矯正器注意事項 → 緊急回診（保留，未上片）
 };
-// 註：外觀模擬／口掃／手術設計三支動畫已改為頁內自架影片（assets/*.mp4），見「初診須知」資料區。
+// 註：外觀模擬／口掃／手術設計三支動畫已改為頁內自架影片（sim.mp4／scan.mp4／surg.mp4），見「初診須知」資料區。
 document.querySelectorAll('.vslot').forEach(el => {
   const id = VIDEOS[el.dataset.video];
   if (!id) return;
