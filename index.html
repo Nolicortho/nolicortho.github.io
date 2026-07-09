@@ -453,7 +453,12 @@ function applyMode() {
   const m = MODES[mode];
   document.querySelectorAll('nav button').forEach(b => { b.style.display = ''; });
   document.body.classList.toggle('noprice', HIDE_PRICES || !!(m && m.hidePrices));
-  if (!m) { banner.style.display = 'none'; return; }
+  if (!m) {
+    banner.style.display = 'none';
+    const sec = mode && document.getElementById(mode);
+    if (sec && sec.classList.contains('tab')) { switchTab(mode); window.scrollTo({top: 0}); }
+    return;
+  }
   banner.textContent = m.msg;
   banner.style.display = 'block';
   document.querySelectorAll('nav button').forEach(b => {
