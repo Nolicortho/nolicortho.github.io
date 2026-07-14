@@ -18,6 +18,7 @@ body{font-family:var(--font);color:var(--ink);background:#fff;line-height:1.75;f
 .wrap{max-width:760px;margin:0 auto;padding:0 20px 60px;}
 header{text-align:center;padding:32px 16px 14px;}
 header img{height:84px;}
+img,video{-webkit-user-drag:none;-webkit-user-select:none;user-select:none;}
 header h1{font-size:20px;letter-spacing:6px;font-weight:700;margin-top:12px;}
 header .en{color:var(--gold);font-size:11px;letter-spacing:4px;margin-top:4px;}
 #modeBanner{display:none;background:var(--tint);border:1px solid var(--gold-line);border-radius:10px;
@@ -378,7 +379,7 @@ figure img{border:1px solid #EFE9DA;}
 </section>
 
 </div>
-<footer>NOLIC ORTHODONTICS</footer>
+<footer>NOLIC ORTHODONTICS<br><span style="font-size:11px;letter-spacing:1px;line-height:1.7">© 2026 Nolic Orthodontics．本網站之文字、圖片與影片皆為原創素材，未經同意請勿轉載或作商業用途。</span></footer>
 <script>
 // ===== 費用顯示總開關：完全不想在網頁顯示價格時改成 true =====
 const HIDE_PRICES = false;
@@ -476,6 +477,10 @@ function applyMode() {
 }
 window.addEventListener('hashchange', applyMode);
 applyMode();
+
+// 基本內容保護（僅能嚇阻一般使用者，無法完全防止複製或截圖）
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
 </script>
 </body>
 </html>
